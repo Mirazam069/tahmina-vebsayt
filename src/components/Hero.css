@@ -1,0 +1,194 @@
+:root {
+  --orange: #ff4d00;
+  --black: #000;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: "RF Dewi Expanded";
+  src: url("../fonts/RFDewi-Black.woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--black);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Rangli blur itemlar */
+.hero-bg-item {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(160px);
+  opacity: 0.6;
+  animation: moveItem 5s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+.hero-bg-item.orange {
+  background: rgba(255, 77, 0, 0.8);
+  top: 20%;
+  left: -150px;
+}
+
+.hero-bg-item.yellow {
+  background: rgba(255, 200, 0, 0.7);
+  bottom: 10%;
+  right: -120px;
+}
+
+/* Harakat animatsiyasi */
+@keyframes moveItem {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(80px, -60px) scale(1.2);
+  }
+  100% {
+    transform: translate(-60px, 70px) scale(1);
+  }
+}
+
+/* Kontent */
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Yorug‘lik */
+.light {
+  position: absolute;
+  top: -20px;
+  right: 100px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 120, 0, 1) 0%,
+    rgba(255, 80, 0, 0.9) 40%,
+    rgba(255, 40, 0, 0.6) 70%,
+    transparent 100%
+  );
+  filter: blur(70px);
+  animation: light-glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes light-glow {
+  from {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+/* Banner rasm */
+.hero-banner {
+  position: absolute;
+  top: -200px;
+  right: -100px;
+  width: 600px;
+  max-width: 100%;
+}
+
+/* Title */
+.hero-title {
+  font-family: "RF Dewi Expanded", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  font-size: clamp(28px, 6vw, 60px);
+}
+
+.hero-title .line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+  color: var(--white);
+  font-size: clamp(22px, 5vw, 80px);
+}
+
+.middle-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Arrow */
+.arrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--orange);
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.arrow-svg {
+  width: 50%;
+  height: 50%;
+  color: var(--white);
+}
+
+/* Outline word */
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--orange);
+}
+
+/* 🔹 Media Queries */
+@media (max-width: 1024px) {
+  .hero-banner {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 auto 20px auto;
+    display: block;
+    width: 400px;
+  }
+  .light {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(20px, 7vw, 36px);
+  }
+  .arrow-wrap {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title .line {
+    flex-direction: column;
+    gap: 10px;
+    font-size: clamp(18px, 6vw, 28px);
+  }
+  .arrow-wrap {
+    margin: 10px 0;
+  }
+}

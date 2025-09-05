@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body{
+  font-family: 'RFDewiExpanded', Arial, sans-serif;
+  font-weight: 900; /* ExtraBold */
+  letter-spacing: -1px; /* zichroq qilish */
+  text-transform: uppercase;
+}
+.navbar {
+  width: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.logo span {
+  color: #ff4d00; /* to‘q sariq rang */
+}
+
+/* Desktop nav */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #ff4d00;
+}
+
+/* Contact button */
+.contact-btn {
+  background: #ff4d00;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.contact-btn:hover {
+  background: #e84300;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .contact-btn {
+    display: none; /* mobilda button pastga tushishi mumkin */
+  }
+  .burger {
+    display: flex;
+  }
+}

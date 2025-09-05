@@ -1,0 +1,82 @@
+:root {
+  --orange: #ff4d00;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  background: var(--black);
+  margin: 0;
+  padding: 0;
+  font-family: "RF Dewi Expanded", sans-serif;
+}
+
+/* Umumiy lenta bar */
+.marquee-bar {
+  width: 99%;
+  left: 0%;
+  overflow: hidden;
+  background: var(--orange);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 9px 0;
+  position: relative;
+  /* text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); */
+  z-index: 999;
+}
+.first{  
+  background-color: var(--white);
+}
+.first .marquee-inner span{
+  color: var(--black);
+}
+
+/* 1-lenta: tepadan pastga qiya */
+.marquee-1 {
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+
+/* 2-lenta: pastdan tepaga qiya */
+.marquee-2 {
+  transform: rotate(3deg);
+  transform-origin: right center;
+  margin-top: -55px;
+}
+
+/* Ichki container */
+.marquee-inner {
+  display: flex;
+  gap: 50px;
+  white-space: nowrap;
+}
+
+.marquee-1 .marquee-inner {
+  animation: scrollLeft 15s linear infinite;
+}
+
+.marquee-2 .marquee-inner {
+  animation: scrollRight 15s linear infinite;
+}
+
+.marquee-inner span {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--black);
+  letter-spacing: 2px;
+  /* filter: blur(1px);
+  opacity: 0.9; */
+}
+
+/* Chapga oqish */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* O‘ngga oqish */
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
