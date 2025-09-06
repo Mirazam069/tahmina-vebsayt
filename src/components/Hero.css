@@ -178,10 +178,16 @@
 @media (max-width: 768px) {
   .hero-title {
     font-size: clamp(20px, 7vw, 36px);
+    position: absolute;
+    bottom: 40px;
   }
   .arrow-wrap {
     width: 36px;
     height: 36px;
+    display: none;
+  }
+  .hero-inner{
+    margin-bottom: -50px;
   }
 }
 
