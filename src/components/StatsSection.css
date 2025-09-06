@@ -76,4 +76,8 @@
     flex-direction: column;
     gap: 20px;
   }
+  .stats-box{
+        flex: 1 1 150px;
+        
+  }
 }
