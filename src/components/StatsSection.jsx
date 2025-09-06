@@ -3,7 +3,7 @@ import "./StatsSection.css";
 
 const StatsSection = () => {
   return (
-    <section className="stats-section">
+    <section className="stats-section" id="statssection">
       <div className="stats-container">
         {/* Yuqoridagi 3 ta box */}
         <div className="stats-row">

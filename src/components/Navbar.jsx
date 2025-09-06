@@ -12,10 +12,10 @@ export default function Navbar() {
 
         {/* Desktop menu */}
         <nav className={`nav-links ${open ? "open" : ""}`}>
-          <a href="#about">loyihalar</a>
-          <a href="#courses">kurslar</a>
           <a href="#about">biz haqimizda</a>
-          <a href="#blog">blog</a>
+          <a href="#courses">kurslar</a>
+          <a href="#testimonals">natijalar</a>
+          <a href="#statssection">statistika</a>
         </nav>
 
         {/* Contact button */}

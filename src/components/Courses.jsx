@@ -25,7 +25,7 @@ const coursesData = [
 
 export default function Courses() {
   return (
-    <section className="courses-section">
+    <section className="courses-section" id="courses">
       <h2 className="courses-title">Bizning Ingliz tili kurslarimiz</h2>
         <div className="rotating-item"></div>
         <div className="rotating-item2"></div>

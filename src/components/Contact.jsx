@@ -23,7 +23,9 @@ export default function Contact() {
           <input type="text" placeholder="Ism" required />
           <input type="email" placeholder="Raqamingiz" required />
           <textarea placeholder="Qanday savolingiz mavjud" rows="5" required></textarea>
-          <button type="submit" className="send-btn">Xabarni yuborish</button>
+          <a href="https://t.me/takh_usman" target="_blank" rel="noopener noreferrer" >
+  <button type="button" className="send-btn">Xabarni yuborish</button>
+</a>
         </form>
       </div>
     </section>

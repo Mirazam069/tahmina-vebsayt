@@ -12,24 +12,17 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Emily Johnson",
-    role: "Student (IELTS Preparation)",
+    name: "Abdujalil Rahmatov",
+    role: "Daraja C1 ( 6 oy davomida) ",
     feedback:
-      "This course helped me achieve my IELTS target score. The practice sessions were very useful and I appreciated the individual attention I received from the instructors. Highly recommended for serious learners.",
-  },
-  {
-    id: 3,
-    name: "Michael Brown",
-    role: "Beginner Student (A1 Level)",
-    feedback:
-      "At first, I was nervous because I had never studied English before. But the friendly atmosphere and step-by-step lessons made me feel comfortable. Now I can introduce myself and talk about daily life easily.",
+      "Ozim Universitetning oxirgi darajasida boʻlganligim tufayli, menga IELTS C1 darajasi kerak bolgan,  Magistraturaga topshirish uchun. Kop oʻquv markazlarga borgan man, lekin ular qisqa muddatda ololmaysz deb aytishgan . Xayritki szni kursingiz haqida malumot koʻrib qoldim va birinchi darsni oʻzidayoq szni dars oʻtish metodiz va oʻquvchilarga berayotgan bilimingiz menga juda yoqib qoldi . Sz tufayli qisqa vaqt ichida IELTSdan C1 darajasini qoʻlga kiritish nasib etti. Rahmat Miss Takhmina !",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="testimonials-section">
-      <h2 className="testimonials-title">What Our Students Say</h2>
+    <section className="testimonials-section" id="testimonals"> 
+      <h2 className="testimonials-title">Bizning talabalarimiz nima deydi</h2>
       <div className="testimonials-container">
         {testimonials.map((item) => (
           <div key={item.id} className="testimonial-card">
