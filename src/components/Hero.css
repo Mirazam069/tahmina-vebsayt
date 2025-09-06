@@ -180,6 +180,9 @@
     font-size: clamp(20px, 7vw, 36px);
     position: absolute;
     bottom: 40px;
+    width: 100%;
+    margin: 0 auto;
+    }
   }
   .arrow-wrap {
     width: 36px;
